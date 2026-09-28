@@ -66,14 +66,6 @@ To download the [Machado de Assis dataset from Kaggle](https://www.kaggle.com/da
 python scripts/machado.py
 ```
 
-You can also build from an existing download without making a network request:
-
-```bash
-python scripts/machado.py --zip /path/to/machado-de-assis.zip
-```
-
-Use `--saida` and `--obras-dir` to choose custom output locations. The builder validates the expected number of works in every category before writing the corpus.
-
 ## Training and generation
 
 The main workflow lives in `train.ipynb`:
@@ -103,8 +95,8 @@ The included notebook output records a validation loss of `1.3441` at step 12,40
 │   ├── machado.py       # Downloads, validates, and assembles the corpus
 │   └── vocab.py         # Prints the corpus character set
 ├── train.ipynb          # Model, training loop, and generation examples
-├── model-01.pkl         # Experimental trained checkpoint
-├── model-{localtime}.pkl
+├── model-v1.pkl         # Experimental trained checkpoint
+├── model-v2.pkl
 └── requirements.txt
 ```
 
